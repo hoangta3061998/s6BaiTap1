@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="result()">
+<p id="1"></p>
+<script>
+    var input = prompt("Nhap ten ngoi sao : ");
+    var star = ["Polaris" , "Aldebaran" , "Deneb" , "Vega" , "Altair" , "Dubhe" , "Regulus"];
+    var aster = ["Ursa Mino" , "Tarurus" , "Cygnus" , "Lyra" , "Aquila" , "Ursa Major" , "Leo"];
+    function searchAster() {
+        for (let i = 0 ; i < star.length ; i++) {
+            if (input == star[i]) {
+                return i;
+            }
+        }
+        return null;
+    } 
+    function result() {
+          if (searchAster() !== null) {
+              document.getElementById('1').innerHTML = aster[searchAster()];
+          } else {
+              alert("Wrong");
+          }
+    }
+    
+
+</script>
+</body>
+</html>
